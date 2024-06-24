@@ -12,18 +12,17 @@ body {
 
 /* Header styles */
 header {
-    padding-left: 10px;
     padding-right: 10px;
     display: flex;
     align-items: center;
 }
 
-/* Logo image styles */
 .logo {
-    flex-basis: 20%
+    flex-basis: 20%;
 }
 
-.logo img{ 
+.logo img { 
+    padding-left: 30px;
     width: 200px;
 }
 
@@ -78,4 +77,48 @@ nav {
 .nav-right ul li a img {
     width: 24px; /* Adjust icon size */
     height: auto;
+}
+
+.shop-now {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Adjust height as needed */
+    margin-top: 80px; /* Space from top */
+    margin-left: 80px;
+}
+
+.content {
+    text-align: center; /* Center text */
+    padding-right: 40px; /* Space between text and image */
+    flex: 1; /* Take remaining space */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start */
+}
+
+.topic {
+    font-family: "Elsie", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #F0DDAA;
+    font-size: 64px;
+    max-width: 500px; /* Set a maximum width for the topic */
+    text-align: left; /* Align text to the left */
+}
+
+.shop-now p {
+    margin-top: 20px; /* Adjust spacing between topic and paragraph */
+    max-width: 500px; /* Set a maximum width for the paragraph */
+    text-align: left; /* Align text to the left */
+    color: #E6E6E6;
+}
+
+.imageIntro {
+    width: 650px; /* Adjust image width */
+    height: 644px; /* Adjust image height */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 50%; /* Make it circular */
+    margin-right: 85px; /* Space between image and text */
+    flex: 1; /* Ensure it takes up the available space */
 }
