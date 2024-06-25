@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #1E261A;
+    background-color: #F0F0F0;
 }
 
 /* Header styles */
@@ -15,6 +15,10 @@ header {
     padding-right: 10px;
     display: flex;
     align-items: center;
+    position: sticky; /* Make the header sticky */
+    top: 0; /* Position at the top of the viewport */
+    background-color: #08131D; /* Background color of the header */
+    z-index: 1000; /* Ensure the header is above other content */
 }
 
 .logo {
@@ -55,6 +59,7 @@ nav {
 
 /* Navigation right styles */
 .nav-right {
+    margin-right: 30px;
     margin-left: auto; /* Pushes .nav-right to the right */
 }
 
@@ -115,10 +120,10 @@ nav {
 }
 
 .topic {
-    font-family: "Elsie", serif;
-    font-weight: 400;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
     font-style: normal;
-    color: #F0DDAA;
+    color: #332F17;
     font-size: 64px;
     max-width: 500px; /* Set a maximum width for the topic */
     text-align: left; /* Align text to the left */
@@ -128,7 +133,7 @@ nav {
     margin-top: 20px; /* Adjust spacing between topic and paragraph */
     max-width: 500px; /* Set a maximum width for the paragraph */
     text-align: left; /* Align text to the left */
-    color: #E6E6E6;
+    color: #998383;
 }
 
 .imageIntro {
@@ -142,6 +147,7 @@ nav {
 
 /* ImgList styles */
 .imgList {
+    padding-top: 50px;
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap to the next line */
     justify-content: space-between; /* Space between columns */
@@ -156,35 +162,46 @@ nav {
     padding: 10px;
     background-color: transparent;
     border-radius: 10px;
+    text-align: center;
 }
+
+.articleImg {
+    width: 473px; /* Fixed width */
+    height: 438px; /* Fixed height */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    border-radius: 40px; /* Rounded corners */
+    margin-bottom: 10px; /* Space between image and heading */
+}
+
 
 .imgList h1 {
     font-size: 24px;
-    color: #F0DDAA;
+    color: #332F17;
     margin-bottom: 10px;
 }
 
 .article p {
-    color: #E6E6E6;
+    color: #998383;
 }
 
 footer {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    border-radius: 5px;
-    color: #E6E6E6;
+    bottom: 20px; /* Distance from the bottom */
+    color: #000000;
     text-align: center;
-    width: 200px;
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    padding: 10px; /* Optional: Padding for content inside the footer */
+    z-index: 1000; /* Optional: Ensure the footer is above other content */
 }
+
 
 #shopbttn {
     margin-top: 50px;
     font-family: "Commissioner", sans-serif;
     font-weight: 300;
     font-size: 20px;
-    color: #F0DDAA;
-    border: 2px solid #F0DDAA; /* Border with the same color */
+    color: #312C10;
+    border: 2px solid #312C10; /* Border with the same color */
     border-radius: 25px; /* Round border */
     padding: 10px 20px; /* Padding for better spacing */
     text-align: center; /* Center text */
@@ -194,6 +211,6 @@ footer {
 }
 
 #shopbttn:hover {
-    background-color: #F0DDAA; /* Change background color on hover */
+    background-color: #a1a1a0; /* Change background color on hover */
     color: #1E261A; /* Change text color on hover */
 }
