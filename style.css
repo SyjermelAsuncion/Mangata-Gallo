@@ -68,11 +68,28 @@ nav {
     margin-left: 20px; /* Space between icons */
 }
 
-.nav-right ul li a {
-    display: block; /* Ensure icons are block elements */
-    text-decoration: none;
-    color: #CDCDB4; /* Text color */
+.nav-left ul li a {
+    text-decoration: none; /* Remove default underline */
+    color: #CDCDB4; /* Ensure text color contrasts with background */
+    font-weight: 100;
+    position: relative; /* Necessary for the pseudo-element positioning */
 }
+
+.nav-left ul li a::after {
+    content: ''; /* Empty content for the pseudo-element */
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Adjust distance from the text */
+    width: 0; /* Initial width */
+    height: 2px; /* Height of the underline */
+    background-color: #FFFFFF; /* Color of the underline */
+    transition: width 0.3s ease; /* Smooth transition effect */
+}
+
+.nav-left ul li a:hover::after {
+    width: 100%; /* Full width on hover */
+}
+
 
 .nav-right ul li a img {
     width: 24px; /* Adjust icon size */
@@ -115,10 +132,68 @@ nav {
 }
 
 .imageIntro {
-    width: 650px; /* Adjust image width */
-    height: 644px; /* Adjust image height */
-    object-fit: cover; /* Maintain aspect ratio */
+    width: 650px; /* Fixed width */
+    height: 644px; /* Fixed height */
+    object-fit: cover; /* Maintain aspect ratio inside the circle */
     border-radius: 50%; /* Make it circular */
     margin-right: 85px; /* Space between image and text */
-    flex: 1; /* Ensure it takes up the available space */
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* ImgList styles */
+.imgList {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-between; /* Space between columns */
+    margin: 20px; /* Add some margin around the container */
+}
+
+.article {
+    margin-right: 20px; /* Space between articles */
+    flex: 1; /* Flex items take up equal space */
+    min-width: 300px; /* Ensure a minimum width for each article */
+    box-sizing: border-box; /* Include padding and border in width/height */
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.imgList h1 {
+    font-size: 24px;
+    color: #F0DDAA;
+    margin-bottom: 10px;
+}
+
+.article p {
+    color: #E6E6E6;
+}
+
+footer {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 5px;
+    color: #E6E6E6;
+    text-align: center;
+    width: 200px;
+}
+
+#shopbttn {
+    margin-top: 50px;
+    font-family: "Commissioner", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #F0DDAA;
+    border: 2px solid #F0DDAA; /* Border with the same color */
+    border-radius: 25px; /* Round border */
+    padding: 10px 20px; /* Padding for better spacing */
+    text-align: center; /* Center text */
+    display: inline-block; /* Make sure the element is inline-block */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+#shopbttn:hover {
+    background-color: #F0DDAA; /* Change background color on hover */
+    color: #1E261A; /* Change text color on hover */
 }
