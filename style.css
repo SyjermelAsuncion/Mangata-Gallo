@@ -214,3 +214,13 @@ footer {
     background-color: #a1a1a0; /* Change background color on hover */
     color: #1E261A; /* Change text color on hover */
 }
+
+
+#footerImg {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 100px; /* Adjust width */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1000; /* Ensure it's above other content */
+}
